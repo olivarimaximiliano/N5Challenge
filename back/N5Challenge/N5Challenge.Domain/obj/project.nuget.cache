@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JrxHZps9r/xkLW/s2NMWwqE5LfwCKjwrEOfwyxZqfikfdfMR7yxinb+6m9lc78qxK7Xs2vR33SYCqUooyush9g==",
+  "success": true,
+  "projectFilePath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MaximilianoOlivari\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\MaximilianoOlivari\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\MaximilianoOlivari\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

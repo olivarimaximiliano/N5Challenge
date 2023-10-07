@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "N5_Challenge.Test": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DB_CNN_STRING": "db_mssql,1433;Database=N5Challenge;User=sa;Password=Pass@word;TrustServerCertificate=true;"
+      },
+      "sqlDebugging": true
+    }
+  }
+}

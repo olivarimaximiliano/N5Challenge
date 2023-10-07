@@ -1,0 +1,6 @@
+{
+  "N5Challenge.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Api",
+  "N5Challenge.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess",
+  "N5Challenge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain",
+  "N5Challenge.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services"
+}

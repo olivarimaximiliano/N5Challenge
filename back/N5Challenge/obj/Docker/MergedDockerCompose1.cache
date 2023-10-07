@@ -1,0 +1,178 @@
+name: dockercompose4399969316058856538
+services:
+  broker:
+    depends_on:
+      zookeeper:
+        condition: service_started
+        required: true
+    environment:
+      CONFLUENT_METRICS_ENABLE: "true"
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker:29092
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: "1"
+      CONFLUENT_METRICS_REPORTER_ZOOKEEPER_CONNECT: zookeeper:2181
+      CONFLUENT_SUPPORT_CUSTOMER_ID: anonymous
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_BROKER_ID: "1"
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: "0"
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    hostname: broker
+    image: confluentinc/cp-enterprise-kafka:5.3.1
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 29092
+      published: "29092"
+      protocol: tcp
+    - mode: ingress
+      target: 9092
+      published: "9092"
+      protocol: tcp
+  db_mssql:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Pass@word
+    image: mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04
+    networks:
+      default: null
+    volumes:
+    - type: volume
+      source: dbdata
+      target: /var/opt/mssql
+      volume: {}
+  elasticsearch:
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+    image: elasticsearch:8.8.0
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 9200
+      published: "9200"
+      protocol: tcp
+    - mode: ingress
+      target: 9300
+      published: "9300"
+      protocol: tcp
+  n5challenge.api:
+    build:
+      context: C:\Sources\N5_Challenge\back\N5Challenge
+      dockerfile: N5Challenge.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: N5Challenge.Api
+      target: base
+    container_name: N5Challenge.Api
+    depends_on:
+      broker:
+        condition: service_started
+        required: true
+      db_mssql:
+        condition: service_started
+        required: true
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DB_CNN_STRING: Server=db_mssql,1433;Database=master;User=sa;Password=Pass@word;
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      ELASTICSEARCH_INDEX: default
+      ELASTICSEARCH_SERVER: elasticsearch:9200
+      KAFKA_BOOSTRAP_SERVER: broker:29092
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: n5challengeapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net7.0/N5Challenge.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "80"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net7.0
+      target: /TokenService.Proxy
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.Api
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\MaximilianoOlivari\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\MaximilianoOlivari\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\MaximilianoOlivari\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files\dotnet\sdk\NuGetFallbackFolder
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\MaximilianoOlivari\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Sources\N5_Challenge\back\N5Challenge
+      target: /src
+      bind:
+        create_host_path: true
+  zookeeper:
+    environment:
+      ZOOKEEPER_CLIENT_PORT: "2181"
+      ZOOKEEPER_TICK_TIME: "2000"
+    hostname: zookeeper
+    image: confluentinc/cp-zookeeper:5.3.1
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 2181
+      published: "2181"
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose4399969316058856538_default
+volumes:
+  dbdata:
+    name: dockercompose4399969316058856538_dbdata

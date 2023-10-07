@@ -1,0 +1,414 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Sources\\N5_Challenge\\back\\N5_Challenge.Test\\N5_Challenge.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Api\\N5Challenge.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Api\\N5Challenge.Api.csproj",
+        "projectName": "N5Challenge.Api",
+        "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Api\\N5Challenge.Api.csproj",
+        "packagesPath": "C:\\Users\\MaximilianoOlivari\\.nuget\\packages\\",
+        "outputPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MaximilianoOlivari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess\\N5Challenge.DataAccess.csproj": {
+                "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess\\N5Challenge.DataAccess.csproj"
+              },
+              "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj": {
+                "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj"
+              },
+              "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services\\N5Challenge.Services.csproj": {
+                "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services\\N5Challenge.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.18.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess\\N5Challenge.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess\\N5Challenge.DataAccess.csproj",
+        "projectName": "N5Challenge.DataAccess",
+        "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess\\N5Challenge.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\MaximilianoOlivari\\.nuget\\packages\\",
+        "outputPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MaximilianoOlivari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj": {
+                "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj",
+        "projectName": "N5Challenge.Domain",
+        "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj",
+        "packagesPath": "C:\\Users\\MaximilianoOlivari\\.nuget\\packages\\",
+        "outputPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MaximilianoOlivari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services\\N5Challenge.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services\\N5Challenge.Services.csproj",
+        "projectName": "N5Challenge.Services",
+        "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services\\N5Challenge.Services.csproj",
+        "packagesPath": "C:\\Users\\MaximilianoOlivari\\.nuget\\packages\\",
+        "outputPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MaximilianoOlivari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess\\N5Challenge.DataAccess.csproj": {
+                "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.DataAccess\\N5Challenge.DataAccess.csproj"
+              },
+              "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj": {
+                "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Domain\\N5Challenge.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Elastic.Clients.Elasticsearch": {
+              "target": "Package",
+              "version": "[8.10.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Sources\\N5_Challenge\\back\\N5_Challenge.Test\\N5_Challenge.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Sources\\N5_Challenge\\back\\N5_Challenge.Test\\N5_Challenge.Test.csproj",
+        "projectName": "N5_Challenge.Test",
+        "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5_Challenge.Test\\N5_Challenge.Test.csproj",
+        "packagesPath": "C:\\Users\\MaximilianoOlivari\\.nuget\\packages\\",
+        "outputPath": "C:\\Sources\\N5_Challenge\\back\\N5_Challenge.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MaximilianoOlivari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Api\\N5Challenge.Api.csproj": {
+                "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Api\\N5Challenge.Api.csproj"
+              },
+              "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services\\N5Challenge.Services.csproj": {
+                "projectPath": "C:\\Sources\\N5_Challenge\\back\\N5Challenge\\N5Challenge.Services\\N5Challenge.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.6.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

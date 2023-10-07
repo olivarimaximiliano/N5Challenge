@@ -1,0 +1,15 @@
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\N5Challenge.DataAccess.csproj.AssemblyReference.cache
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\N5Challenge.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\N5Challenge.DataAccess.AssemblyInfoInputs.cache
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\N5Challenge.DataAccess.AssemblyInfo.cs
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\N5Challenge.DataAccess.csproj.CoreCompileInputs.cache
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\bin\Debug\net7.0\N5Challenge.DataAccess.deps.json
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\bin\Debug\net7.0\N5Challenge.DataAccess.dll
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\bin\Debug\net7.0\N5Challenge.DataAccess.pdb
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\bin\Debug\net7.0\N5Challenge.Domain.dll
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\bin\Debug\net7.0\N5Challenge.Domain.pdb
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\N5Challenge.DataAccess.csproj.CopyComplete
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\N5Challenge.DataAccess.dll
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\refint\N5Challenge.DataAccess.dll
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\N5Challenge.DataAccess.pdb
+C:\Sources\N5_Challenge\back\N5Challenge\N5Challenge.DataAccess\obj\Debug\net7.0\ref\N5Challenge.DataAccess.dll
